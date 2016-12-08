@@ -1,0 +1,48 @@
+body{
+    background-color: #222;
+}
+
+#burger-container{
+    position: relative;
+    margin: 200px auto;
+    width: 100px;
+}
+
+#burger-container #burger{
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#burger-container span{
+    background: #e1e7f4;
+    display: block;
+    width: 100px;
+    height: 14px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 0;
+    transition: all ease-in-out .4s;
+    -webkit-transition: all ease-in-out .4s;
+}
+
+#burger-container.open  span:first-child{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    top: 36px;
+}
+
+#burger-container.open  span:nth-child(2),
+#burger-container.open  span:nth-child(3){
+    width: 0px;
+    opacity: 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+#burger-container.open  span:nth-child(4){
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: -36px;
+}
