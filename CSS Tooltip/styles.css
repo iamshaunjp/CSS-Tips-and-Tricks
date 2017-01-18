@@ -1,0 +1,73 @@
+body{
+    background: #533872;
+    color: #fff;
+    font-family: verdana;
+}
+
+form{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20% auto;
+}
+
+form label{
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+form input{
+    margin: 0 10px;
+    padding: 8px 8px 6px;
+    font-size: 20px;
+    border: 0;
+    color: #444;
+}
+
+/* --------- Tooltip Styles ---------- */
+
+.tooltip{
+    position: relative;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 12px;
+    border-radius: 100%;
+    font-size: 20px;
+    cursor: help;
+}
+
+.tooltip::before, .tooltip::after{
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all ease 0.3s;
+}
+
+.tooltip::before{
+    content: "";
+    border-width: 10px 8px 0 8px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.3) transparent transparent transparent;
+    bottom: 120%;
+    margin-left: -8px;
+}
+
+.tooltip::after{
+    content: attr(data-tooltip);
+    background: rgba(0,0,0,0.3);
+    bottom: 150%;
+    font-size: 14px;
+    padding: 14px;
+    margin-left: -150px;
+    border-radius: 10px;
+    width: 300px;
+    color: #eee;
+}
+
+/* Hover states */
+
+.tooltip:hover::before, .tooltip:hover::after{
+    opacity: 1;
+    transform: scaleX(1);
+    transition: all ease 0.3s;
+}
