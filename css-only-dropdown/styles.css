@@ -1,0 +1,56 @@
+/* Base Styles */
+
+body{
+    background: #e7e7e7;
+    font-family: arial;
+    font-weight: bold;
+    color: #603d7b;
+    font-size: 18px;
+}
+
+/* Menu Styles */
+
+input#menu{
+    display: none;
+}
+
+.dropdown-menu{
+    background: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #603d7b;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.dropdown-menu a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.dropdown-menu label{
+    display: block;
+    cursor: pointer;
+    background: url(img/closed.png) no-repeat left center;
+    padding: 30px 0 30px 80px;
+}
+
+/* Toggle Effect */
+
+.menu-content{
+    max-height: 0;
+    overflow: hidden;
+}
+
+input:checked ~ .menu-content{
+    max-height: 1000px;
+    transition: all ease 1s;
+}
+
+input:checked ~ label{
+    background: url(img/open.png) no-repeat left center;
+}
